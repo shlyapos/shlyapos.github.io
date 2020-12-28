@@ -1,0 +1,86 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.main_page {
+    width: 100vw;
+    height: 100vh;
+
+    background-color: black;
+}
+
+.left_side {
+    width: 100vw;
+    height: 100vh;
+
+    position: absolute;
+    left: -70vw;
+    top: 0;
+    transform: skew(-10deg);
+    background-color: tomato;
+
+    z-index: 100;
+    animation: slideInLeft;
+    animation-duration: 0.7s;
+}
+
+.photo_bg {
+    width: 24vw;
+    height: 24vw;
+
+    border-radius: 12vw;
+    transform: skew(10deg);
+    background-color: tomato;
+    position: absolute;
+
+    top: calc(50% - 12vw);
+    right: -7vw;
+}
+
+.photo_img {
+    width: 23vw;
+    height: 23vw;
+
+    border-radius: 11.5vw;
+    transform: skew(10deg);
+    background-color: white;
+    position: absolute;
+
+    top: calc(50% - 11.5vw);
+    right: -6.5vw;
+}
+
+.right_side {
+    width: 100vw;
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.top_line, .bottom_line {
+    width: 100%;
+    height: 120px;
+
+    background-color: blue; 
+}
+
+/* Animation */
+
+@keyframes slideInLeft {
+    from {
+      transform: skew(-10deg) translate3d(-100%, 0, 0);
+      visibility: visible;
+    }
+  
+    to {
+      transform: skew(-10deg) translate3d(0, 0, 0);
+    }
+  }
+  
+  .slideInLeft {
+    animation-name: slideInLeft;
+  }
