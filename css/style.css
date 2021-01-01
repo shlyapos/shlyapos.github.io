@@ -71,14 +71,47 @@ h1 {
 
 .top_line, .bottom_line {
     width: 100%;
-    height: 120px;
+    height: 10vw;
 
     background-color: #262F34; 
 }
 
 .bottom_line {
-    animation: slideInUp;
-    animation-duration: 0.7s;
+  animation: slideInUp;
+  animation-duration: 0.7s;
+
+  display: flex;
+  justify-content: flex-end;
+}
+
+.icons_block {
+  width: 25vw;
+  height: 100%;
+
+  margin-right: 5vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.icon {
+  width: 6vw;
+  height: 6vw;
+
+  text-decoration: none;
+  /* background-color: white; */
+}
+
+.tg-icon, .vk-icon, .gh-icon {
+  width: 100%;
+  height: 100%;
+
+  transition: .3s all ease-in-out;
+}
+
+.tg-icon:hover, .vk-icon:hover, .gh-icon:hover {
+  transform: scale(1.05);
+  transition: .3s all ease-in-out;
 }
 
 .top_line {
