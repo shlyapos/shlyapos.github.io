@@ -1,68 +1,70 @@
+@font-face { font-family: 'SegoeUI-Light';  src: local('SegoeUI-Light'), url('https://nomail.com.ua/files/woff/5076583fa2a14cd2cf3634ff59a1138b.woff') format('woff'); }
+
 body {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 .main_page {
-    width: 100vw;
-    height: 100vh;
+  width: 100vw;
+  height: 100vh;
 
-    background-color: #F1D3BC;
+  background-color: #F1D3BC;
 }
 
 .left_side {
-    width: 100vw;
-    height: 100vh;
+  width: 100vw;
+  height: 100vh;
 
-    position: absolute;
-    left: -75vw;
-    top: 0;
-    transform: skew(-10deg);
-    background-color: #F34A4A;
+  position: absolute;
+  left: -75vw;
+  top: 0;
+  transform: skew(-10deg);
+  background-color: #F34A4A;
 
-    z-index: 100;
-    animation: slideInLeft;
-    animation-duration: 0.7s;
+  z-index: 100;
+  animation: slideInLeft;
+  animation-duration: 0.7s;
 
-    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
 }
 
 .photo_bg {
-    width: 24vw;
-    height: 24vw;
+  width: 24vw;
+  height: 24vw;
 
-    border-radius: 12vw;
-    transform: skew(10deg);
-    background-color: #F34A4A;
-    position: absolute;
+  border-radius: 12vw;
+  transform: skew(10deg);
+  background-color: #F34A4A;
+  position: absolute;
 
-    top: calc(50% - 12vw);
-    right: -7vw;
+  top: calc(50% - 12vw);
+  right: -7vw;
 
-    /* box-shadow: 10px 0px 20px rgba(0, 0, 0, 0.5); */
+  /* box-shadow: 10px 0px 20px rgba(0, 0, 0, 0.5); */
 }
 
 .photo_img {
-    width: 23vw;
-    height: 23vw;
+  width: 23vw;
+  height: 23vw;
 
-    border-radius: 11.5vw;
-    transform: skew(10deg);
-    background-color: white;
-    position: absolute;
+  border-radius: 11.5vw;
+  transform: skew(10deg);
+  background-color: white;
+  position: absolute;
 
-    top: calc(50% - 11.5vw);
-    right: -6.5vw;
+  top: calc(50% - 11.5vw);
+  right: -6.5vw;
 }
 
 .right_side {
-    width: 100vw;
-    height: 100vh;
+  width: 100vw;
+  height: 100vh;
 
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
 }
 
 h1 {
@@ -70,10 +72,28 @@ h1 {
 }
 
 .top_line, .bottom_line {
-    width: 100%;
-    height: 10vw;
+  width: 100%;
+  height: 10vw;
 
-    background-color: #262F34; 
+  background-color: #262F34; 
+}
+
+.top_line {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.shlyapos {
+  /* font-size: calc(1em + 7vw); */
+  font-size: 60px;
+  font-family: "SegoeUI-Light", "Arial", sans-serif;
+  letter-spacing: 75px;
+
+  margin-right: 4vw;
+
+  color: #F34A4A;
+  text-transform: uppercase;
 }
 
 .bottom_line {
@@ -115,53 +135,61 @@ h1 {
 }
 
 .top_line {
-    animation: slideInDown;
-    animation-duration: 0.7s;
+  animation: slideInDown;
+  animation-duration: 0.7s;
 }
 
 /* Animation */
-
 @keyframes slideInLeft {
-    from {
-      transform: skew(-10deg) translate3d(-100%, 0, 0);
-      visibility: visible;
-    }
-  
-    to {
-      transform: skew(-10deg) translate3d(0, 0, 0);
-    }
-  }
-  
-  .slideInLeft {
-    animation-name: slideInLeft;
+  from {
+    transform: skew(-10deg) translate3d(-100%, 0, 0);
+    visibility: visible;
   }
 
-  @keyframes slideInUp {
-    from {
-      transform: translate3d(0, 100%, 0);
-      visibility: visible;
-    }
-  
-    to {
-      transform: translate3d(0, 0, 0);
-    }
+  to {
+    transform: skew(-10deg) translate3d(0, 0, 0);
   }
-  
-  .slideInUp {
-    animation-name: slideInUp;
+}
+
+.slideInLeft {
+  animation-name: slideInLeft;
+}
+
+@keyframes slideInUp {
+  from {
+    transform: translate3d(0, 100%, 0);
+    visibility: visible;
   }
 
-  @keyframes slideInDown {
-    from {
-      transform: translate3d(0, -100%, 0);
-      visibility: visible;
-    }
-  
-    to {
-      transform: translate3d(0, 0, 0);
-    }
+  to {
+    transform: translate3d(0, 0, 0);
   }
+} 
+  
+.slideInUp {
+  animation-name: slideInUp;
+}
+
+@keyframes slideInDown {
+  from {
+    transform: translate3d(0, -100%, 0);
+    visibility: visible;
+  }
+  
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}
   
   .slideInDown {
     animation-name: slideInDown;
+}
+
+
+/* Media */
+@media (min-width: 480px) and (max-width: 1024px) {
+  .shlyapos {
+    font-size: calc(14px + (18 - 14) * ((100vw - 480px) / (1024 - 480)));
+    letter-spacing: calc(14px + (18 - 8) * ((100vw - 480px) / (1024 - 480)));
   }
+}
