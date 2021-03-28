@@ -4,7 +4,8 @@ body {
 }
 
 section {
-  width: 375px
+  min-width: 320px;
+  max-width: 479px;
 }
 
 .header {
@@ -14,23 +15,44 @@ section {
   background-image: url(../img/header-photo-monohrome-phone.png);
   background-size: 280px 420px;
   background-repeat: no-repeat;
-  background-position: 40px 110px;
+  background-position: center 110px;
 
   background-color: #5F15FD;
 }
 
-.nav-menu {
-  width: 210px;
+/* .nav-menu {
+  width: 280px;
   height: 20px;
 
+  /position: relative;
+  left: 110px;/
+
+margin-bottom: 54px;
+
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+}
+
+*/
+
+.header__nav-menu {
+  margin-bottom: 54px;
+}
+
+.site-logo {
   position: relative;
-  left: 110px;
+  display: inline-block;
 
   margin-bottom: 54px;
+}
 
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+.nav-btn {
+  position: relative;
+  display: inline-block;
+
+  float: right;
+  margin-right: 40px;
 }
 
 .header__heading {
