@@ -4,7 +4,7 @@ body {
 }
 
 section {
-  width: 360px
+  width: 375px
 }
 
 .header {
@@ -88,7 +88,7 @@ section {
   padding-top: 30px;
   padding-bottom: 30px;
 
-  background-color: red;
+  /* background-color: red; */
 
   color: #FFFFFF;
 
