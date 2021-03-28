@@ -4,9 +4,128 @@ body {
 }
 
 section {
-  width: 1440px;
+  width: 360px
 }
 
+.header {
+  padding-top: 50px;
+  padding-bottom: 356px;
+
+  background-image: url(../img/header-photo-monohrome-phone.png);
+  background-size: 280px 420px;
+  background-repeat: no-repeat;
+  background-position: 40px 110px;
+
+  background-color: #5F15FD;
+}
+
+.nav-menu {
+  width: 210px;
+  height: 20px;
+
+  position: relative;
+  left: 110px;
+
+  margin-bottom: 54px;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.header__heading {
+  width: 255px;
+  height: 90px;
+
+  position: relative;
+  left: 20px;
+
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 29px;
+  text-align: left;
+
+  color: #FFFFFF;
+}
+
+.about__me-info {
+  padding-top: 30px;
+  padding-bottom: 100px;
+}
+
+.about__heading {
+  height: 30px;
+  margin-bottom: 0;
+
+  font-size: 36px;
+  line-height: 44px;
+  text-align: center;
+  color: #5F15FD;
+}
+
+.about__text-wrapper {
+  width: 294px;
+  height: 210px;
+
+  margin: 0 auto;
+
+  font-size: 14px;
+  line-height: 17px;
+  text-align: center;
+
+  color: #363636;
+}
+
+.about__text {
+  height: 85px;
+
+  margin-top: 40px;
+  margin-bottom: 0;
+}
+
+.about__ed-info {
+  padding-top: 30px;
+  padding-bottom: 30px;
+
+  background-color: red;
+
+  color: #FFFFFF;
+
+  background-image: url(../img/about-bg-monohrome-phone.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-attachment: fixed;
+}
+
+.head__ed-info {
+  color: #FFFFFF;
+}
+
+.about__ed-text {
+  width: 230px;
+  height: 50px;
+
+  margin: 40px auto 0;
+
+  font-size: 14px;
+  line-height: 17px;
+  text-align: center;
+}
+
+.about__degree {
+  height: 30px;
+  font-size: 24px;
+  line-height: 29px;
+
+  margin-top: 40px;
+  margin-bottom: 0;
+
+  text-align: center;
+}
+
+/*
 .header {
   height: 100vh;
 
@@ -17,8 +136,10 @@ section {
 
   background-color: #5F15FD;
 }
+*/
 
 /* Для лечения выпадения верхнего марджина */
+/*
 .header::before {
   content: "";
   overflow: hidden;
@@ -116,7 +237,7 @@ section {
   line-height: 59px;
 }
 
-@media (max-width: 480px) {
+@media (max-width: 375px) {
   section {
     width: 320px;
   }
@@ -200,3 +321,10 @@ section {
     line-height: 29px;
   }
 }
+
+@media (max-width: 425px) {
+  section {
+    width: 375px;
+  }
+}
+*/
