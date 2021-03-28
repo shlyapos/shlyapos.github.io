@@ -1,195 +1,113 @@
-@font-face { font-family: 'SegoeUI-Light';  src: local('SegoeUI-Light'), url('https://nomail.com.ua/files/woff/5076583fa2a14cd2cf3634ff59a1138b.woff') format('woff'); }
-
 body {
   margin: 0;
-  padding: 0;
+  font-family: Montserrat;
 }
 
-.main_page {
-  width: 100vw;
-  height: 100vh;
-
-  background-color: #F1D3BC;
-}
-
-.left_side {
-  width: 100vw;
-  height: 100vh;
-
-  position: absolute;
-  left: -75vw;
-  top: 0;
-  transform: skew(-10deg);
-  background-color: #F34A4A;
-
-  z-index: 100;
-  animation: slideInLeft;
-  animation-duration: 0.7s;
-
-  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
-}
-
-.photo_bg {
-  width: 24vw;
-  height: 24vw;
-
-  border-radius: 12vw;
-  transform: skew(10deg);
-  background-color: #F34A4A;
-  position: absolute;
-
-  top: calc(50% - 12vw);
-  right: -7vw;
-
-  /* box-shadow: 10px 0px 20px rgba(0, 0, 0, 0.5); */
-}
-
-.photo_img {
-  width: 23vw;
-  height: 23vw;
-
-  border-radius: 11.5vw;
-  transform: skew(10deg);
-  background-color: white;
-  position: absolute;
-
-  top: calc(50% - 11.5vw);
-  right: -6.5vw;
-}
-
-.right_side {
-  width: 100vw;
-  height: 100vh;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-}
-
-h1 {
-  color: #615049;
-}
-
-.top_line, .bottom_line {
+.header {
   width: 100%;
-  height: 10vw;
+  height: 100vh;
 
-  background-color: #262F34; 
+  background-image: url(../img/header-photo-monohrome.jpg);
+  background-position: top right;
+  background-size: 1090px 100vh;
+  background-repeat: no-repeat;
+
+  background-color: #5F15FD;
 }
 
-.top_line {
-  display: flex;
-  justify-content: flex-end;
+/* Для лечения выпадения верхнего марджина */
+.header::before {
+  content: "";
+  overflow: hidden;
+  display: block;
+}
+
+.header__heading,
+.about__heading {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 72px;
+  line-height: 72px;
   align-items: center;
 }
 
-.shlyapos {
-  /* font-size: calc(1em + 7vw); */
-  font-size: 60px;
-  font-family: "SegoeUI-Light", "Arial", sans-serif;
-  letter-spacing: 75px;
+.header__heading {
+  width: 790px;
+  height: 264px;
 
-  margin-right: 4vw;
+  margin-top: 400px;
+  margin-left: 152px;
 
-  color: #F34A4A;
-  text-transform: uppercase;
+  text-align: left;
+  color: #FFFFFF;
 }
 
-.bottom_line {
-  animation: slideInUp;
-  animation-duration: 0.7s;
-
-  display: flex;
-  justify-content: flex-end;
-}
-
-.icons_block {
-  width: 25vw;
-  height: 100%;
-
-  margin-right: 5vw;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.icon {
-  width: 6vw;
-  height: 6vw;
-
-  text-decoration: none;
-  /* background-color: white; */
-}
-
-.tg-icon, .vk-icon, .gh-icon {
+.about {
   width: 100%;
-  height: 100%;
-
-  transition: .3s all ease-in-out;
+  height: auto;
 }
 
-.tg-icon:hover, .vk-icon:hover, .gh-icon:hover {
-  transform: scale(1.05);
-  transition: .3s all ease-in-out;
+.about__heading {
+  margin: 0 0;
+  text-align: center;
 }
 
-.top_line {
-  animation: slideInDown;
-  animation-duration: 0.7s;
+.about__me-info {
+  width: 100%;
+  height: 370px;
+
+  padding-top: 30px;
+
+  color: #5F15FD;
+  background-color: #FFFFFF;
 }
 
-/* Animation */
-@keyframes slideInLeft {
-  from {
-    transform: skew(-10deg) translate3d(-100%, 0, 0);
-    visibility: visible;
-  }
+.about__text-wrapper {
+  width: 1256px;
 
-  to {
-    transform: skew(-10deg) translate3d(0, 0, 0);
-  }
+  margin-top: 50px;
+  margin: 50px auto 0;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
-.slideInLeft {
-  animation-name: slideInLeft;
+.about__text {
+  width: 578px;
+
+  font-size: 24px;
+  line-height: 29px;
+
+  color: #363636;
 }
 
-@keyframes slideInUp {
-  from {
-    transform: translate3d(0, 100%, 0);
-    visibility: visible;
-  }
+.about__ed-info {
+  width: 100%;
+  /* height: auto; */
 
-  to {
-    transform: translate3d(0, 0, 0);
-  }
-} 
-  
-.slideInUp {
-  animation-name: slideInUp;
+  padding-top: 30px;
+  padding-bottom: 112px;
+
+  box-sizing: border-box;
+
+  color: #FFFFFF;
+
+  background-image: url(../img/about-bg-monohrome.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
-@keyframes slideInDown {
-  from {
-    transform: translate3d(0, -100%, 0);
-    visibility: visible;
-  }
-  
-  to {
-    transform: translate3d(0, 0, 0);
-  }
-}
-  
-  .slideInDown {
-    animation-name: slideInDown;
-}
+.about__ed-text {
+  width: 856px;
+  height: auto;
 
+  margin: 50px auto 0;
 
-/* Media */
-@media (min-width: 480px) and (max-width: 1024px) {
-  .shlyapos {
-    font-size: calc(14px + (18 - 14) * ((100vw - 480px) / (1024 - 480)));
-    letter-spacing: calc(14px + (18 - 8) * ((100vw - 480px) / (1024 - 480)));
-  }
+  font-size: 36px;
+  line-height: 44px;
+  text-align: center;
+
+  color: #FFFFFF;
 }
