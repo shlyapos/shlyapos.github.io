@@ -4,7 +4,7 @@ body {
 }
 
 .header {
-  width: 100%;
+  width: 100vh;
   height: 100vh;
 
   background-image: url(../img/header-photo-monohrome.jpg);
@@ -16,11 +16,11 @@ body {
 }
 
 /* Для лечения выпадения верхнего марджина */
-.header::before {
+/* .header::before {
   content: "";
   overflow: hidden;
   display: block;
-}
+} */
 
 .header__heading,
 .about__heading {
@@ -29,6 +29,9 @@ body {
   font-size: 72px;
   line-height: 72px;
   align-items: center;
+
+  left: 150px;
+  top: 400px;
 }
 
 .header__heading {
