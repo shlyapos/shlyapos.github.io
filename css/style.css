@@ -1,182 +1,156 @@
-/* --- Animations --- */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500;900&display=swap');
 
-@keyframes slideInLeft {
-  from {
-    transform: translate3d(-100%, 0, 0);
-    visibility: visible;
-  }
-
-  to {
-    transform: translate3d(0, 0, 0);
-  }
+:root {
+  --screen-size: 1920
 }
 
-.slideInLeft {
-  animation-name: slideInLeft;
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-
-  to {
-    opacity: 1;
-  }
-}
-
-.fadeIn {
-  animation-name: fadeIn;
-}
-
-/* --- --- --- --- --- */
-
-body {
+.body {
   margin: 0;
-  font-family: Montserrat;
+  padding: 0 ;
+
+  font-family: Roboto;
 }
 
-section {
-  min-width: 320px;
-  max-width: 479px;
+.video-wrapper {
+  -o-object-fit: cover;
+  object-fit: cover;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: -100;
 }
 
-.header {
-  padding-top: 50px;
-  padding-bottom: 356px;
+.main-header {
+  padding: 20px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 
-  background-image: url(../img/header-photo-monohrome-phone.png);
-  background-size: 280px 420px;
-  background-repeat: no-repeat;
-  background-position: center 110px;
-
-  background-color: #5F15FD;
-
-  animation: fadeIn;
-  animation-duration: 0.7s;
+  width: auto;
 }
 
-.header__nav-menu {
-  height: 20px;
+.main-header__social-icons {
+  width: 100%;
+  height: 40px;
 }
 
-.header__nav-menu {
-  margin-bottom: 54px;
+.social-icons__item {
+  margin-right: 8px;
+
+  text-decoration: none;
 }
 
-.site-logo {
-  position: relative;
-  display: inline-block;
-
-  margin-bottom: 54px;
+.social-icons__item:hover {
+  opacity: 0.7;
 }
 
-.nav-btn {
-  position: relative;
-  display: inline-block;
+.main-header__my-name {
+  margin-top: 0;
 
-  float: right;
-  margin-right: 40px;
-}
+  align-items: center;
+  color: #F9F8E4;
 
-.header__heading {
-  width: 255px;
-  height: 90px;
-
-  position: relative;
-  left: 20px;
-
+  font-family: Roboto;
   font-style: normal;
-  font-weight: 600;
-  font-size: 24px;
-  line-height: 29px;
+  font-weight: 900;
+  font-size: calc(((174/var(--screen-size)) * 100) * 1vw);
+  line-height: 105px;
+  
+  width: 100%;
+  text-align: justify;
+  letter-spacing: calc(((-.48/var(--screen-size)) * 100) * 1vw);
+}
+
+.my-name__text {
+  width: 100%;
+  font-size: calc(((340/var(--screen-size)) * 100) * 1vw);
+  margin-bottom: calc(((-30/var(--screen-size)) * 100) * 1vw);
+  margin-top: calc(((-33/var(--screen-size)) * 100) * 1vw);
+  height: calc(((140/var(--screen-size)) * 100) * 1vw);
+  text-align: center;
+  white-space: nowrap;
+}
+
+.main-body__hobbie-item {
+  position: absolute;
+  padding: 8px;
+  z-index: 10;
+}
+
+.hobbie-item__designer {
+  left: 16px;
+  top: 338px;
+}
+
+.hobbie-item__coder {
+  right: 16px;
+  top: 468px;
+}
+
+.hobbie-item__header {
+  margin-top: 0;
+  margin-bottom: 8px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 40px;
+  line-height: 47px;
+  
+  align-items: center;
+  letter-spacing: 0.1em;
+  
+  color: #F9F8E4;
+}
+
+.text-left {
   text-align: left;
-
-  color: #FFFFFF;
-
-  animation: slideInLeft;
-  animation-duration: 0.7s;
 }
 
-.about__me-info {
-  padding-top: 30px;
-  padding-bottom: 100px;
+.text-right {
+  text-align: right;
 }
 
-.about__heading {
-  height: 30px;
-  margin-bottom: 0;
+.hobbie-item__descr {
+  width: 493px;
+  height: 121px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 35px;
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.1em;
 
-  font-size: 36px;
-  line-height: 44px;
+  color: #F9F8E4;
+}
+
+.main-footer {
+  background-color: #F9F8E4;
+  display: flex;
+  
+  position: absolute;
+  
+  flex-direction: column;
+  justify-content: center;
+  left: 0;
+  bottom: 0;
+
+  width: 100%;
+  height: 60px;
+}
+
+.main-footer__marquee {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 23px;
+  align-items: center;
   text-align: center;
-  color: #5F15FD;
-}
+  letter-spacing: 0.1em;
 
-.about__text-wrapper {
-  width: 294px;
-  height: 210px;
-
-  margin: 0 auto;
-
-  font-size: 14px;
-  line-height: 17px;
-  text-align: center;
-
-  color: #363636;
-}
-
-.about__text {
-  height: 85px;
-
-  margin-top: 40px;
-  margin-bottom: 0;
-}
-
-.about__ed-info {
-  padding-top: 30px;
-  padding-bottom: 30px;
-
-  /* background-color: red; */
-
-  color: #FFFFFF;
-
-  background-image: url(../img/about-bg-monohrome-phone.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: bottom;
-  background-attachment: fixed;
-}
-
-.head__ed-info {
-  color: #FFFFFF;
-}
-
-.about__ed-text {
-  width: 230px;
-  height: 50px;
-
-  margin: 40px auto 0;
-
-  font-size: 14px;
-  line-height: 17px;
-  text-align: center;
-}
-
-.about__degree {
-  height: 30px;
-  font-size: 24px;
-  line-height: 29px;
-
-  margin-top: 40px;
-  margin-bottom: 0;
-
-  text-align: center;
-}
-
-@media (min-width: 480px) {
-  section {
-    min-width: 480px;
-    max-width: 767px;
-  }
+  margin-right: 5px !important;
 }
